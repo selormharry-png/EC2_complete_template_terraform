@@ -15,8 +15,8 @@ The second subnet is created but is not associated with the public route table o
 ## Prerequisites
 
 - Terraform installed.
-- AWS CLI credentials configured for the profile selected by `aws_profile` (defaults to `Kloud_Messiah`), or set `aws_profile` to a profile available on your machine.
-- An EC2 key pair named by `key_name` (defaults to `terra_tut_key`) already created in the selected AWS region.
+- AWS CLI credentials configured for the profile selected by `aws_profile` (defaults to `xxxxx`), or set `aws_profile` to a profile available on your machine.
+- An EC2 key pair named by `key_name` (defaults to `fara_tut_key`) already created in the selected AWS region.
 
 The AWS identity needs permission to create and manage the VPC, networking, security group, and EC2 resources in the selected region.
 
@@ -51,7 +51,7 @@ terraform destroy
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `aws_region` | `eu-central-1` | AWS region for the deployment. |
-| `aws_profile` | `Kloud_Messiah` | Local AWS CLI profile used by the AWS provider. |
+| `aws_profile` | `xxxxx` | Local AWS CLI profile used by the AWS provider. |
 | `vpc_cidr` | `10.0.0.0/16` | VPC CIDR block. |
 | `vpc_name` | `main` | VPC `Name` tag. |
 | `aws_internet_gateway` | `main-igw` | Internet gateway `Name` tag. |
@@ -60,14 +60,14 @@ terraform destroy
 | `route_table_name` | `0.0.0.0/0` | Destination CIDR for the route through the internet gateway. |
 | `aws_security_group_name` | `main-sg` | Security group name. |
 | `instance_type` | `t3.micro` | EC2 instance type. |
-| `key_name` | `terra_tut_key` | Existing EC2 key pair name in the selected region. |
-| `owner` | `Selorm` | Owner name rendered on the web page. |
-| `owner_email` | `selormharry@gmail.com` | Owner email rendered on the web page. |
+| `key_name` | `xxxxxx` | Existing EC2 key pair name in the selected region. |
+| `owner` | `Wednesday` | Owner name rendered on the web page. |
+| `owner_email` | `example@gmail.com` | Owner email rendered on the web page. |
 
 The AMI is selected automatically as the most recent Amazon-owned Amazon Linux 2 x86_64 HVM image matching the configuration.
 
 ## Security and State
 
-SSH, HTTP, and HTTPS ingress are currently allowed from `0.0.0.0/0`. Restrict these CIDR ranges to trusted IP addresses before using this configuration in a production environment. The instance has no HTTPS/TLS configuration despite port 443 being open.
+SSH opened to my_IP address, HTTP, and HTTPS ingress are currently allowed from `0.0.0.0/0`. Restrict these CIDR ranges to trusted IP addresses before using this configuration in a production environment. The instance has no HTTPS/TLS configuration despite port 443 being open.
 
 Terraform state files (`terraform.tfstate` and its backup) contain infrastructure metadata and may include sensitive values. Keep them private and do not commit them. The `.gitignore` excludes dotfiles and Terraform state-related files.
