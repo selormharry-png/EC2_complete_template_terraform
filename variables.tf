@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "aws_profile" {
   description = "the aws profile to use"
   type        = string
-  default     = "Kloud_Messiah"
+  default     = "Kloud-Messiah"
 }
 
 variable "vpc_cidr" {

@@ -1,0 +1,39 @@
+# Local .terraform directories (providers, modules)
+**/.terraform/*
+
+# State files (may contain secrets)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files (often contain secrets / credentials)
+*.tfvars
+*.tfvars.json
+
+# Override files (local, per-developer)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Saved plan files
+*.tfplan
+tfplan
+
+# CLI config files (may contain HCP Terraform tokens)
+.terraformrc
+terraform.rc
+
+# SSH keys / credentials
+*.pem
+*.key
+.env
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
