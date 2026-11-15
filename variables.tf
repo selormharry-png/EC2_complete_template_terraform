@@ -1,13 +1,13 @@
 variable "aws_region" {
   description = "The AWS region to deploy resources in"
   type        = string
-  default     = "eu-central-1"
+  default     = "us-east-1"
 }
 
 variable "aws_profile" {
-  description = "the aws profile to use"
+  description = "Local AWS CLI profile to use. Leave null on HCP Terraform so credentials come from workspace env vars."
   type        = string
-  default     = "Kloud-Messiah"
+  default     = null
 }
 
 variable "vpc_cidr" {
