@@ -58,13 +58,13 @@ variable "instance_type" {
   default     = "t3.micro"
 }
 
-variable "key_name" {
-  description = "the name of the SSH key pair"
-  type        = string
-  default     = "safe_key"
-}
+# variable "key_name" {
+#   description = "the name of the SSH key pair"
+#   type        = string
+#   default     = "safe_key"
+# }
 
-# variable "key_path" {
+# # variable "key_path" {
 #   description = "the path to the SSH key pair"
 #   type        = string
 #   default     = "~/.ssh/terra_tut_key.pem"
