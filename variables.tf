@@ -61,7 +61,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "the name of the SSH key pair"
   type        = string
-  default     = "terra_tut_key"
+  default     = "safe_key"
 }
 
 # variable "key_path" {
