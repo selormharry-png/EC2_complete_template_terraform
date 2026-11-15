@@ -79,5 +79,5 @@ variable "owner" {
 variable "owner_email" {
   description = "the email of the owner"
   type        = string
-  default     = "selormharry@gmail.com"
+  default     = "xyz@gmail.com"
 }
